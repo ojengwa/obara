@@ -1,10 +1,10 @@
 {
-  "name": "migrate-mongo",
-  "version": "9.0.0",
-  "description": "A database migration tool for MongoDB in Node",
-  "main": "lib/migrate-mongo.js",
+  "name": "obara",
+  "version": "1.0.0",
+  "description": "A database migration tool for MongoDB in Node. An extension of migrate-mongo",
+  "main": "lib/migrate.js",
   "bin": {
-    "migrate-mongo": "bin/migrate-mongo.js"
+    "obara": "bin/migrate.js"
   },
   "scripts": {
     "test": "nyc --reporter=html --reporter=text mocha --recursive",

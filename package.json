@@ -1,6 +1,6 @@
 {
   "name": "obara",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A database migration tool for MongoDB in Node. An extension of migrate-mongo",
   "main": "lib/migrate.js",
   "bin": {

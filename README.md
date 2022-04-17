@@ -64,7 +64,7 @@ module.exports = {
     url: "mongodb://localhost:27017",
 
     // TODO Change this to your database name:
-    databaseName: "YOURDATABASENAME",
+    database: "YOURDATABASENAME",
 
     options: {
       useNewUrlParser: true // removes a deprecation warning when connecting
@@ -88,7 +88,7 @@ module.exports = {
 };
 ````
 
-Alternatively, you can also encode your database name in the url (and leave out the `databaseName` property):
+Alternatively, you can also encode your database name in the url (and leave out the `database` property):
 ````
         url: "mongodb://localhost:27017/YOURDATABASE",
 ````

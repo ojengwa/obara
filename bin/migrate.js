@@ -3,7 +3,7 @@
 const program = require("commander");
 const _ = require("lodash");
 const Table = require("cli-table3");
-const migrateMongo = require("../lib/migrate-mongo");
+const migrateMongo = require("../lib/migrate");
 const pkgjson = require("../package.json");
 
 function printMigrated(migrated = []) {
@@ -32,7 +32,8 @@ program.version(pkgjson.version);
 program
   .command("init")
   .description("initialize a new migration project")
-  .option("-m --module <module loading system>", "module loading system (commonjs (DEFAULT) or esm)")
+  .option("-m --module <module loading system>", "module loading system (commonjs (DEFAULT) or esm)", 'commonjs')
+  .option("-r --replace [true|false]", "Replace existing config file (false (DEFAULT) or true)", false)
   .action(options => {
     global.options = options;
     migrateMongo

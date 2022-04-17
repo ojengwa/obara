@@ -1,12 +1,15 @@
 // In this file you can configure migrate-mongo
 
 const config = {
+    // Your ORM of choice. Currently supports Mongoose and Typeorm (typeorm).
+    orm: "mongoose",
+    
     mongodb: {
         // TODO Change (or review) the url to your MongoDB:
         url: "mongodb://localhost:27017",
 
         // TODO Change this to your database name:
-        databaseName: "YOURDATABASENAME",
+        database: "YOURDATABASENAME",
 
         options: {
             useNewUrlParser: true, // removes a deprecation warning when connecting
@@ -19,6 +22,9 @@ const config = {
     // The migrations dir, can be an relative or absolute path. Only edit this when really necessary.
     migrationsDir: "migrations",
 
+    // The entities/schema dir, can be an relative or absolute path.
+    entitiesDir: "entities",
+
     // The mongodb collection where the applied changes are stored. Only edit this when really necessary.
     changelogCollectionName: "changelog",
 
@@ -27,7 +33,7 @@ const config = {
 
     // Enable the algorithm to create a checksum of the file contents and use that in the comparison to determin
     // if the file should be run.  Requires that scripts are coded to be run multiple times.
-    useFileHash: false,
+    useFileHash: true,
 
     // Don't change this, unless you know what you're doing
     moduleSystem: 'esm',
